@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>There was an error!</h1>
+	<a href="/">Go back to login page</a>
+
+</body>
+</html>
+
+
+
+	<!--<script>
+		// on load of page
+	  	$(function(){
+		    // when the client clicks SUBMIT
+		    $('#submit').click( function(e) {
+		    		e.preventDefault();
+			      var username = $('#username').val();
+			      $('#username').val('');
+			      var email = $('#email').val();
+			      $('#email').val('');
+			      var user = { username, email};
+			      // tell server to execute send attendees with 3 parameters
+			      $.post('/', user, function(user) {
+					  $('#rep').html(user);
+					});
+		    });
+	 
+		    // when the client hits ENTER on their keyboard
+		    $('#email').keypress(function(e) {
+
+			    if(e.which == 13) {
+				    $(this).blur();
+				    $('#submit').focus().click();
+			    }
+		    });
+	    });
+
+	</script> -->

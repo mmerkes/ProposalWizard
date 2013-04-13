@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Login here!</h1>
+
+<form action="/" method="post">
+	<fieldset>
+		<legend>Join our email list</legend>
+		<p>Keep up-to-date on your latest proposals!</p>
+		<ol>
+		<li><label for="firstlast">Username:</label>
+		<input type="text" name="username" id="username"></li>
+		<li><label for="email">Email:</label>
+		<input type="text" name="email" id="email"></li>
+		</ol>
+		<input type="submit" value="Submit">
+	</fieldset>
+</form>
+</body>
+</html>
+
+
+
+	<!--<script>
+		// on load of page
+	  	$(function(){
+		    // when the client clicks SUBMIT
+		    $('#submit').click( function(e) {
+		    		e.preventDefault();
+			      var username = $('#username').val();
+			      $('#username').val('');
+			      var email = $('#email').val();
+			      $('#email').val('');
+			      var user = { username, email};
+			      // tell server to execute send attendees with 3 parameters
+			      $.post('/', user, function(user) {
+					  $('#rep').html(user);
+					});
+		    });
+	 
+		    // when the client hits ENTER on their keyboard
+		    $('#email').keypress(function(e) {
+
+			    if(e.which == 13) {
+				    $(this).blur();
+				    $('#submit').focus().click();
+			    }
+		    });
+	    });
+
+	</script> -->
