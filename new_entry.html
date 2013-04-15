@@ -9,16 +9,32 @@
 
 <form action="/" method="post">
 	<fieldset>
-		<legend>Jo</legend>
-		<p>Keep up-to-date on your latest proposals!</p>
-		<ol>
-		<li><label for="firstlast">Username:</label>
-		<input type="text" name="username" id="username"></li>
-		<li><label for="email">Email:</label>
-		<input type="text" name="email" id="email"></li>
-		</ol>
-		<input type="submit" value="Submit">
+		<legend>Basic Information</legend>
+		<ul>
+			<li><label for="pi_name">PI:</label>
+				<input type="text" name="pi_name"></li>
+			<li><label for="project_title">Project Title:</label>
+				<input type="text" name="project_title"></li>
+			<li><label for="short_title">Short Title:</label>
+				<input type="text" name="short_title"></li>
+			<li><label for="start_date">Start Date:</label>
+				<input type="date" name="start_date"></li>
+			<li><label for="end_date">End Date:</label>
+				<input type="date" name="end_date"></li>
+			<li><label for="deadline">Deadline:</label>
+				<input type="date" name="deadline"></li>
+			<li><label for="sponsor">Sponsor:</label>
+				<input type="text" name="sponsor"></li>
+			<li><label for="app_type">Application Type</label>
+				<select name="app_type">
+					<option>New</option>
+					<option>Resubmission</option>
+					<option>Non-Competing Renewal</option>
+					<option>Competing Renewal</option>
+				</select></li>
+		</ul>
 	</fieldset>
+	<input type="submit" value="Submit">
 </form>
 </body>
 </html>

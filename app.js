@@ -13,15 +13,19 @@ app.configure(function(){
 });
 
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/login.html');
+  res.sendfile(__dirname + '/new_entry.html');
 });
 
 app.post("/", function(req, res){
-  var users = {'_id': req.body.username, 'email': req.body.email};
+  var proposal = {'pi_name': req.body.pi_name, 'project_title': req.body.project_title,
+                  'short_title': req.body.short_title, 'start_date': req.body.start_date,
+                  'end_date': req.body.end_date, 'deadline': req.body.deadline,
+                  'sponsor': req.body.sponsor, 'app_type': req.body.app_type
+                  };
   db.open(function(err, db) {
     if(!err) {
-      db.collection('users', function(err, collection){
-        collection.insert(users, {safe : true}, function(err, result){
+      db.collection('proposal', function(err, collection){
+        collection.insert(proposal, {safe : true}, function(err, result){
           if (err) {
             console.log(err);
             res.sendfile(__dirname + '/error.html');
@@ -39,17 +43,6 @@ app.post("/", function(req, res){
   });
 });
 
-app.get("/hi", function(req, res){
-  var message = [
-    "<h1> Hello, Express </h1>",
-    "<p> Welcome to 'Building Web Apps in Node.js with Express.'</p>",
-    "<p> You'll love Express because it's</p>",
-    "<ul><li>fast</li>",
-    "<li>fun</li>",
-    "<li>flexible</li></ul>"].join("\n");
-
-  res.send(message);
-});
 /*
 app.get("/users/:userId", function(req, res){
   res.send("<h1>Hello, User #" + req.params.userId + "!</h1>");
