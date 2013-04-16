@@ -10,35 +10,106 @@
 <form action="/" method="post">
 	<fieldset>
 		<legend>Basic Information</legend>
-		<ul>
-			<li><label for="pi_name">PI:</label>
-				<input type="text" name="pi_name"></li>
-			<li><label for="project_title">Project Title:</label>
-				<input type="text" name="project_title"></li>
-			<li><label for="short_title">Short Title:</label>
-				<input type="text" name="short_title"></li>
-			<li><label for="start_date">Start Date:</label>
-				<input type="date" name="start_date"></li>
-			<li><label for="end_date">End Date:</label>
-				<input type="date" name="end_date"></li>
-			<li><label for="deadline">Deadline:</label>
-				<input type="date" name="deadline"></li>
-			<li><label for="sponsor">Sponsor:</label>
-				<input type="text" name="sponsor"></li>
-			<li><label for="app_type">Application Type</label>
+		<table>
+			<tr><td><label for="pi_name">PI:</label></td><td>
+				<input type="text" name="pi_name"></td></tr>
+			<tr><td><label for="project_title">Project Title:</label></td><td>
+				<input type="text" name="project_title"></td></tr>
+			<tr><td><label for="short_title">Short Title:</label></td><td>
+				<input type="text" name="short_title"></td></tr>
+			<tr><td><label for="start_date">Start Date:</label></td><td>
+				<input type="date" name="start_date"></td></tr>
+			<tr><td><label for="end_date">End Date:</label></td><td>
+				<input type="date" name="end_date"></td></tr>
+			<tr><td><label for="deadline">Deadline:</label></td><td>
+				<input type="date" name="deadline"></td></tr>
+			<tr><td><label for="sponsor">Sponsor:</label></td><td>
+				<input type="text" name="sponsor"></td></tr>
+			<tr><td><label for="app_type">Application Type</label></td><td>
 				<select name="app_type">
 					<option>New</option>
 					<option>Resubmission</option>
 					<option>Non-Competing Renewal</option>
 					<option>Competing Renewal</option>
-				</select></li>
-		</ul>
+				</select></td></tr>
+		</table>
 	</fieldset>
+	<fieldset>
+		<legend>Proposal Information</legend>
+			<table>
+				<tr>
+					<td><label for="rfa_url">RFA URL</label></td>
+					<td><input type="url" name="rfa_url"></td>
+				</tr>
+				<tr>
+					<td><label for="rfa_title">RFA URL</label></td>
+					<td><input type="text" name="rfa_title"></td>
+				</tr>
+				<tr>
+					<td><label for="prime">Prime or Subcontract</label></td>
+					<td>
+						<select name="prime">
+							<option>Prime</option>
+							<option>Subcontract</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="project_type">Project Type</label></td>
+					<td>
+						<select name="project_type">
+							<option>Research</option>
+							<option>Training</option>
+							<option>Education</option>
+							<option>Other Sponsored Activity</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="key_personnel">Key Personnel</label></td>
+					<td>
+						<select name="key_personnel" multiple="true">
+							<option>Jon Snow</option>
+							<option>King Robert</option>
+							<option>Eddard Stark</option>
+							<option>Dany</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<label for="abstract">Abstract</label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<textarea name="abstract" rows="10" cols="50" spellcheck="true"></textarea>
+					</td>
+				</tr>
+			</table>
+	</fieldset>
+
 	<input type="submit" value="Submit">
 </form>
 </body>
 </html>
 <!--
+Administrative Support
+	grant manager - list of names
+	grant prep contacts
+
+Compliance
+	conducted internationally
+	cost-share? - prompts more details
+	special security or export control issues? - prompt more details
+	animals?
+	environmental health and safety
+	human subjects - yes/no
+
+Additional Information
+	Notes
+	uploads
+
 Basic Information
 	PI
 	title
@@ -57,19 +128,6 @@ Proposal Information
 	key personnel: multiple entries
 	abstract
 
-Administrative Support
-	grant manager - list of names
-	grant prep contacts
-
-Compliance
-	conducted internationally
-	cost-share? - prompts more details
-	special security or export control issues? - prompt more details
-	animals?
-	environmental health and safety
-	human subjects - yes/no
-
-Additional Information
-	Notes
-	uploads
+*bring up special requirements for PI. i.e. Acting letter, letter 
+from other department, etc.
 	-->
