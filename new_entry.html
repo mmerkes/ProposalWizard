@@ -42,7 +42,7 @@
 					<td><input type="url" name="rfa_url"></td>
 				</tr>
 				<tr>
-					<td><label for="rfa_title">RFA URL</label></td>
+					<td><label for="rfa_title">RFA Title</label></td>
 					<td><input type="text" name="rfa_title"></td>
 				</tr>
 				<tr>
@@ -88,28 +88,116 @@
 				</tr>
 			</table>
 	</fieldset>
+	<fieldset>
+		<legend>Administrative Support</legend>
+		<table>
+			<tr>
+				<td>
+					<label for="grant_manager">Grant Manager</label>
+					<select name="grant_manager">
+						<option>Littlefinger</option>
+						<option>The Spider</option>
+						<option>Hodor</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="prop_support" multiple="true">Grant Prep Support</label>
+					<select name="prop_support">
+						<option>Littlefinger</option>
+						<option>The Spider</option>
+						<option>Hodor</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	<fieldset>
+		<legend>Compliance</legend>
+		<table>
+			<tr>
+				<td>
+					<label for="international">Conducted Internationally</label>
+					<select name="international">
+						<option>yes</option>
+						<option>no</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="cost_share">Cost Sharing</label>
+					<select name="cost_share">
+						<option>none</option>
+						<option>mandatory</option>
+						<option>voluntary</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="security_export">Security and Export</label>
+					<select name="security_export">
+						<option>no special issues</option>
+						<option>special security and export issues</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="animals">Animal Subjects</label>
+					<select name="animals">
+						<option>yes</option>
+						<option>no</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="env_health_safety">Environmental Health and Safety</label>
+					<select name="env_health_safety">
+						<option>no special issues</option>
+						<option>special issues</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="humans">Human Subjects</label>
+					<select name="humans">
+						<option>yes</option>
+						<option>no</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	<fieldset>
+		<label>Additional Information</label>
+		<table>
+			<tr>
+				<td colspan="2">
+					<label for="notes">Additional Notes</label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<textarea name="notes" rows="10" cols="50" spellcheck="true"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="uploads">Uploads</label></td>
+				<td><input type="file" name="uploads"></td>
+			</tr>
+		</table>
+	</fieldset>
 
 	<input type="submit" value="Submit">
 </form>
 </body>
 </html>
 <!--
-Administrative Support
-	grant manager - list of names
-	grant prep contacts
-
-Compliance
-	conducted internationally
-	cost-share? - prompts more details
-	special security or export control issues? - prompt more details
-	animals?
-	environmental health and safety
-	human subjects - yes/no
-
-Additional Information
-	Notes
-	uploads
-
 Basic Information
 	PI
 	title
@@ -127,6 +215,22 @@ Proposal Information
 	project type
 	key personnel: multiple entries
 	abstract
+
+Administrative Support
+	grant manager - list of names
+	grant prep contacts
+
+Compliance
+	conducted internationally
+	cost-share? - prompts more details
+	special security or export control issues? - prompt more details
+	animals?
+	environmental health and safety
+	human subjects - yes/no
+
+Additional Information
+	Notes
+	uploads
 
 *bring up special requirements for PI. i.e. Acting letter, letter 
 from other department, etc.

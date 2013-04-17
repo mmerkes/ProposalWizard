@@ -20,7 +20,15 @@ app.post("/", function(req, res){
   var proposal = {'pi_name': req.body.pi_name, 'project_title': req.body.project_title,
                   'short_title': req.body.short_title, 'start_date': req.body.start_date,
                   'end_date': req.body.end_date, 'deadline': req.body.deadline,
-                  'sponsor': req.body.sponsor, 'app_type': req.body.app_type
+                  'sponsor': req.body.sponsor, 'app_type': req.body.app_type,
+                  'rfa_url': req.body.rfa_url, 'rfa_title': req.body.rfa_title,
+                  'prime': req.body.prime, 'project_type': req.body.project_type,
+                  'key_personnel': req.body.key_personnel, 'abstract': req.body.abstract,
+                  'grant_manager': req.body.grant_manager, 'prop_support': req.body.prop_support,
+                  'international': req.body.international, 'cost_share': req.body.cost_share,
+                  'security_export': req.body.security_export, 'animals': req.body.animals,
+                  'env_health_safety': req.body.env_health_safety, 'humans': req.body.humans,
+                  'notes': req.body.notes, 'uploads': req.body.notes
                   };
   db.open(function(err, db) {
     if(!err) {
